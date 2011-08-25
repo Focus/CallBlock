@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+<ScrollView 
+android:layout_height="fill_parent"
+android:layout_width="fill_parent">
+<LinearLayout
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <TextView
+    	android:id="@+id/numbertitle"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="left"
+    	android:textSize="7pt"
+    	android:layout_margin="2px"
+    	android:background="#222222"
+    	android:text="Numbers to filter"/>
+    <RadioGroup
+      android:id="@+id/radio_group"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <RadioButton android:id="@+id/radio_all"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="All Numbers" />
+      <RadioButton android:id="@+id/radio_begin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Begining with" />
+      <RadioButton android:id="@+id/radio_end"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ending with" />
+      <RadioButton android:id="@+id/radio_contains"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Containing" />
+      <RadioButton android:id="@+id/radio_exact"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Exactly" />
+    </RadioGroup>
+    <EditText android:id="@+id/number"
+    android:phoneNumber="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"/>
+    
+    <TextView
+    	android:id="@+id/starttitle"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="left"
+    	android:textSize="7pt"
+    	android:layout_margin="2px"
+    	android:background="#222222"
+    	android:text="Start Time"/>
+    <TimePicker 
+    	android:id="@+id/start"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"/>
+    <TextView
+    	android:id="@+id/endtitle"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="left"
+    	android:textSize="7pt"
+    	android:layout_margin="2px"
+    	android:background="#222222"
+    	android:text="End Time"/>
+    <TimePicker
+    	android:id="@+id/stop"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"/>
+    <TextView
+    	android:id="@+id/daystitle"
+    	android:layout_height="wrap_content"  
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="left"
+    	android:textSize="7pt"
+    	android:layout_margin="2px"
+    	android:background="#222222"
+    	android:text="Days of the week"/>
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <CheckBox	
+    android:id="@+id/check_sun"
+    android:text="Sun"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    <CheckBox	
+    android:id="@+id/check_mon"
+    android:text="Mon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    <CheckBox	
+    android:id="@+id/check_tue"
+    android:text="Tue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    </LinearLayout>
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <CheckBox
+    android:id="@+id/check_wed"
+    android:text="Wed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    <CheckBox	
+    android:id="@+id/check_thu"
+    android:text="Thu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    <CheckBox	
+    android:id="@+id/check_fri"
+    android:text="Fri"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    <CheckBox	
+    android:id="@+id/check_sat"
+    android:text="Sat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="8pt"/>
+    </LinearLayout>
+    		
+    <LinearLayout android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+    <Button
+        android:id="@+id/filter_save"  
+        android:text="Save"    
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="buttonPress"
+        android:layout_weight="1" />
+    <Button  
+        android:id="@+id/filter_discard"  
+        android:text="Discard"  
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="buttonPress"
+        android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

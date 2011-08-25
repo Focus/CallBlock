@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.focus.callblock"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".CallBlockActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <service android:name=".CallService" />
+    <activity android:name=".FiltersActivity" />
+    <activity android:name=".LogsActivity" />
+    <activity android:name=".FilterEditor" />
+    <receiver android:name=".CallReceiver">
+    <intent-filter>
+      	<action android:name="android.intent.action.PHONE_STATE" />
+    	</intent-filter>
+	</receiver>
+
+    </application>
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+</manifest>
