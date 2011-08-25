@@ -14,7 +14,7 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int add=0x7f060019;
+        public static final int add=0x7f060021;
         public static final int check_fri=0x7f060012;
         public static final int check_mon=0x7f06000e;
         public static final int check_sat=0x7f060013;
@@ -22,12 +22,16 @@ public final class R {
         public static final int check_thu=0x7f060011;
         public static final int check_tue=0x7f06000f;
         public static final int check_wed=0x7f060010;
-        public static final int conditions=0x7f060018;
+        public static final int conditions=0x7f060020;
         public static final int daystitle=0x7f06000c;
+        public static final int display_dow=0x7f06001d;
+        public static final int display_end_time=0x7f06001b;
+        public static final int display_numbers=0x7f060017;
+        public static final int display_start_time=0x7f060019;
         public static final int endtitle=0x7f06000a;
         public static final int filter_discard=0x7f060015;
         public static final int filter_save=0x7f060014;
-        public static final int filterslist=0x7f060017;
+        public static final int filterslist=0x7f06001f;
         public static final int number=0x7f060007;
         public static final int numbertitle=0x7f060000;
         public static final int radio_all=0x7f060002;
@@ -36,22 +40,30 @@ public final class R {
         public static final int radio_end=0x7f060004;
         public static final int radio_exact=0x7f060006;
         public static final int radio_group=0x7f060001;
-        public static final int service_switch=0x7f060016;
+        public static final int select_dow=0x7f06001c;
+        public static final int select_end_time=0x7f06001a;
+        public static final int select_numbers=0x7f060016;
+        public static final int select_start_time=0x7f060018;
+        public static final int service_switch=0x7f06001e;
         public static final int start=0x7f060009;
         public static final int starttitle=0x7f060008;
         public static final int stop=0x7f06000b;
     }
     public static final class layout {
         public static final int filter_editor=0x7f030000;
-        public static final int filters=0x7f030001;
-        public static final int filters_element=0x7f030002;
-        public static final int main=0x7f030003;
+        public static final int filter_editor2=0x7f030001;
+        public static final int filters=0x7f030002;
+        public static final int filters_element=0x7f030003;
+        public static final int main=0x7f030004;
     }
     public static final class menu {
         public static final int filters_menu=0x7f050000;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int hello=0x7f040000;
+        public static final int app_name=0x7f040000;
+        public static final int end_time=0x7f040003;
+        public static final int numbers_to_filter=0x7f040001;
+        public static final int start_time=0x7f040002;
+        public static final int week_days=0x7f040004;
     }
 }

@@ -22,23 +22,22 @@ public class FiltersAdapter extends BaseAdapter{
 		this.items = items;
 		inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
-	@Override
+	
 	public int getCount() {
 		return items.size();
 	}
 
-	@Override
 	public Object getItem(int arg0) {
 		return items.get(arg0);
 	}
 
-	@Override
+
 	public long getItemId(int arg0) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
 		LinearLayout view = (LinearLayout) inflater.inflate(R.layout.filters_element, null, false);

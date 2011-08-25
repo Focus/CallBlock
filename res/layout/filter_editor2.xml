@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+<ScrollView 
+android:layout_height="fill_parent"
+android:layout_width="fill_parent">
+<LinearLayout
+  android:clickable="false"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+<LinearLayout
+  android:clickable="true"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/select_numbers">
+<TextView 
+android:textSize="12pt"
+android:textStyle="bold"
+android:text="@string/numbers_to_filter"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"/>
+<TextView 
+android:id="@+id/display_numbers"
+android:textSize="9pt"
+android:text=" "
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+/>
+<TextView 
+android:background="#3f3f3f"
+android:layout_width="fill_parent"
+android:layout_height="2pt"/>
+</LinearLayout>
+<LinearLayout
+  android:clickable="true"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/select_start_time">
+<TextView 
+android:textSize="12pt"
+android:textStyle="bold"
+android:text="@string/start_time"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"/>
+<TextView 
+android:id="@+id/display_start_time"
+android:textSize="9pt"
+android:text=" "
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+/>
+<TextView 
+android:background="#3f3f3f"
+android:layout_width="fill_parent"
+android:layout_height="2pt"/>
+</LinearLayout>
+<LinearLayout
+  android:clickable="true"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/select_end_time">
+<TextView 
+android:textSize="12pt"
+android:textStyle="bold"
+android:text="@string/end_time"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"/>
+<TextView 
+android:id="@+id/display_end_time"
+android:textSize="9pt"
+android:text=" "
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+/>
+<TextView 
+android:background="#3f3f3f"
+android:layout_width="fill_parent"
+android:layout_height="2pt"/>
+</LinearLayout>
+
+<LinearLayout
+  android:clickable="true"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/select_dow">
+<TextView 
+android:textSize="12pt"
+android:textStyle="bold"
+android:text="@string/week_days"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"/>
+<TextView 
+android:id="@+id/display_dow"
+android:textSize="9pt"
+android:text=" "
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+/>
+<TextView 
+android:background="#3f3f3f"
+android:layout_width="fill_parent"
+android:layout_height="2pt"/>
+</LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+<LinearLayout android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+    <Button
+        android:id="@+id/filter_save"  
+        android:text="Save"    
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="buttonPress"
+        android:layout_weight="1" />
+    <Button  
+        android:id="@+id/filter_discard"  
+        android:text="Discard"  
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="buttonPress"
+        android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

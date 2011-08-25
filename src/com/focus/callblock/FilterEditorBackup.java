@@ -1,19 +1,16 @@
 package com.focus.callblock;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
+import android.widget.CheckBox;
 
-public class FilterEditor extends Activity{
+public class FilterEditorBackup extends Activity{
 	
 	Filter oldfilter;
 	@Override
@@ -21,48 +18,11 @@ public class FilterEditor extends Activity{
 		super.onCreate(savedInstanceState);
 		Bundle bundle = this.getIntent().getExtras();
 		oldfilter = new Filter(bundle.getString("numbers"), bundle.getString("days"), bundle.getInt("start"), bundle.getInt("stop"));
-		setContentView(R.layout.filter_editor2);
+		setContentView(R.layout.filter_editor);
 		setForm(oldfilter);
-		
-		//Set the click listeners for the containers
-		OnClickListener ocl = new View.OnClickListener() {
-            public void onClick(View v) {
-                showDialog(v.getId());
-                v.setBackgroundResource(android.R.drawable.list_selector_background);
-            }
-        };
-        
-		LinearLayout ll = (LinearLayout) findViewById(R.id.select_numbers);
-		ll.setOnClickListener(ocl);
 	}
 	
-	@Override
-	protected Dialog onCreateDialog(int id){
-		
-		switch (id){
-		case R.id.select_numbers:
-			
-		}
-		
-		return null;
-	}
-	
-	private void setForm(Filter filter){
-		TextView tv = (TextView) findViewById(R.id.display_numbers);
-		tv.setText(filter.getNumber());
-		
-		tv = (TextView) findViewById(R.id.display_start_time);
-		tv.setText((int) filter.start/60 + ":" + ((""+filter.start % 60).length()==1 ? "0" : "") + (filter.start % 60));
-		
-		tv = (TextView) findViewById(R.id.display_end_time);
-		tv.setText((int) filter.stop/60 + ":" + ((""+filter.stop % 60).length()==1 ? "0" : "") + (filter.stop % 60));
-		
-		tv = (TextView) findViewById(R.id.display_dow);
-		tv.setText(filter.getDow());
-	}
-	
-	
-	/*public void buttonPress(View v){
+	public void buttonPress(View v){
 		if(v.getId() == R.id.filter_save){
 			Filter filter = new Filter();
 			
@@ -148,5 +108,5 @@ public class FilterEditor extends Activity{
 				ch.setChecked(true);
 			}
 		}
-	}*/
+	}
 }

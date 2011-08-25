@@ -49,9 +49,9 @@ public class DBHandle  {
 		int dow = cal.get(Calendar.DAY_OF_WEEK);
 		
 		Cursor c = db.query(TABLE_NAME, new String[]{"numbers", "days", "startMin", "stopMin"},
-				"(CASE WHEN startMin <= stopMin THEN " +
+				"(CASE WHEN startMin < stopMin THEN " +
 				min + " BETWEEN startMin AND stopMin " +
-						"WHEN startMin>stopMin THEN ("+
+						"WHEN startMin>=stopMin THEN ("+
 						min + " BETWEEN startMin AND 24*60) OR ("+
 						min + " BETWEEN 0 AND stopMin) END)",
 				null, null, null, null);

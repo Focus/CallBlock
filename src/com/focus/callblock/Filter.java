@@ -74,6 +74,19 @@ public class Filter {
 		return numbers;
 	}
 	
+	public String getDow(){
+		String numToDay[] = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+		String ret = "";
+		for(int i = 1; i < 8; i++){
+			if(days.indexOf(""+i) != -1)
+				ret += numToDay[i-1] + ", ";
+		}
+		if(ret.length() > 2)
+			ret = ret.substring(0, ret.length() - 2);
+		
+		return ret;
+	}
+	
 	public String getConditions(){
 		String ret;
 		if(start != 0 || stop != 24*60)
@@ -83,14 +96,7 @@ public class Filter {
 		else
 			ret = "Allday\n";
 		
-		String numToDay[] = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-		
-		for(int i = 1; i < 8; i++){
-			if(days.indexOf(""+i) != -1)
-				ret += numToDay[i-1] + ", ";
-		}
-		if(ret.length() > 2)
-			ret = ret.substring(0, ret.length() - 2);
+		ret += this.getDow();
 		
 		return ret;
 	}
